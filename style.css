@@ -18,7 +18,7 @@ body{
 /*header*/
 
 #header{
-    position:fixed;
+    position:absolute;
     top:0;
     left:0;
     width:100%;
@@ -34,6 +34,89 @@ body{
 
 /*forside*/
 
+#foran_dania_container{
+    width:100%;
+    height:20vw;
+
+    position: absolute;
+    top:5vw;
+}
+
 #foran_dania{
-    width:100vw;
+    padding:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(80%);
+}
+
+.btn{
+    position:absolute;
+    right: 10vw;
+    top: 75vw;
+
+    /*rediger under her*/
+    padding:16px 40px;
+    background:#A60D0D;
+    color:white;
+
+    font-size:22px;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-family: "Press Start 2P", system-ui;
+    
+    border:none;
+
+    transform:skew(-12deg);
+    box-shadow:
+    0 0 15px #A60D0D,
+    6px 6px 0px black;
+
+    cursor:pointer;
+    transition:0.25s;
+    overflow:hidden;
+    }
+
+.btn:hover{
+transform:skew(-12deg) scale(1.08);
+box-shadow:
+0 0 25px #A60D0D,
+10px 10px 0px black;
+}
+
+.btn span{
+display:inline-block;
+transform:skew(12deg);
+}
+
+.btn:active{ 
+transform:skew(-12deg) scale(0.96);
+}
+
+#nav_button_div{
+    position: absolute;
+    top:28vw;
+    display:flex;
+    flex-direction: row;
+    gap:3vw;
+    width:100%;
+    justify-content: center;
+}
+
+.nav_btn{
+    width:12vw;
+    height:4vw;
+    border-radius: 100px;
+    border:none;
+    background-color: #F21313;
+    color:white;
+    cursor:pointer;
+    font-size:1.2vw; 
+    font-family: "goldman" sans-serif;
+}
+
+.nav_btn:hover{
+    background-color: #A60D0D;
+    transition: .2s;
 }
