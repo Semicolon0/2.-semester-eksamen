@@ -24,7 +24,7 @@ h1, p{
 /*header*/
 
 #header{
-    position:fixed;
+    position:absolute;
     top:0;
     left:0;
     width:100%;
@@ -161,6 +161,35 @@ transform:skew(-12deg) scale(0.96);
     margin-top:3vw;
 }
 
+
+/*uddannelser div*/
+#uddannelser_div{
+    width:100%;
+    height:100vh;
+    background-color: #242424;
+
+    display:flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+#uddannelser_div h1{
+    color:white;
+    font-size: 3vw;
+}
+
+#uddannelser_img_div{
+    display:flex;
+    flex-direction: row;
+    margin-top:2vh;
+    gap: 8vw;
+}
+
+.uddannelser_img{
+    width: 15vw;
+    height:40vh;
+}
 
 /*bottom spacer*/
 
