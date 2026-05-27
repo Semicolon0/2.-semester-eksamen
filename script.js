@@ -15,6 +15,14 @@ function nav_interact(btnStr){
             document.getElementById("uddannelser_div").scrollIntoView({behavior: "smooth"});
             break;
 
+        case "nav_studie_liv":
+            document.getElementById("studie_liv_div").scrollIntoView({behavior: "smooth"});
+            break;
+
+        case "nav_ansoeg":
+            window.location.href="ansoeg.html";
+            break;
+
         default:
             console.log("an error occured");
             break;
