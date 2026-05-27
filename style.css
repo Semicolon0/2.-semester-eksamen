@@ -229,6 +229,69 @@ transform:skew(-12deg) scale(0.96);
     margin-top:10vh;
 }
 
+/*tidligere studernede*/
+#tidligere_studerende_div{
+    background-color: #ECECEC;
+    width:100%;
+    height:150vh;
+
+    display:flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+#tidligere_studerende_div .c{
+    background-color: #ECECEC;
+    --c: #ffffff;
+}
+
+#tidligere_studerende_div::after{
+    display: none;
+}
+
+#tidligere_studerende_div h1{
+    position: relative;
+    z-index: 2;
+    font-size: 4vw;
+}
+
+
+#tidligere_studerende_projekt_display{
+    z-index: 2;
+    position: relative;
+    display:flex;
+    flex-direction:row;
+
+    margin-top:5vh;
+    width:70%;
+}
+
+#projekt_display_controls{
+    position: relative;
+    z-index: 2;
+    display:flex;
+    flex-direction: row;
+    gap:1vw;
+    margin-top:5vh;
+}
+
+.dot{
+    display:block;
+    width:1vw;
+    height:1vw;
+    background-color:#FF8F8F;
+    border-radius:100px;
+    z-index:6;
+}
+
+.display_arrow{
+    width:2vw;
+}
+
 /*bottom spacer*/
 
 #bottom_spacer{
@@ -273,7 +336,7 @@ More comprehensive version at shenanigans.shoghisimon.ca/collection/css-rain-bg/
   width: 100%;
   height: 100%;
   filter:brightness(40%);
-  --c: #09f;
+  --c: #03f;
   background-color: #000;
   background-image: radial-gradient(4px 100px at 0px 235px, var(--c), #0000),
     radial-gradient(4px 100px at 300px 235px, var(--c), #0000),
