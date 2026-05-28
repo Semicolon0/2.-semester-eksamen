@@ -36,11 +36,11 @@ h1, p, h2{
 #dania_logo{
     padding:1vw;
     height:8vh;
+    transition: 0.2s;
 }
 
 #dania_logo:hover{
     transform: scale(0.9);
-    transition: 0.2s;
 }
 
 /*-----------------forside-----------------*/
@@ -117,13 +117,13 @@ transform:skew(-12deg) scale(0.96);
     cursor:pointer;
     font-size:1.2vw; 
     font-family: "goldman", sans-serif;
+    transition: .2s;
 }
 
 .nav_btn:hover{
     filter:brightness(300%);
     transform: scale(1.06);
     box-shadow: .3vw .5vw 0px black;
-    transition: .2s;
 }
 
 #om_os_div, #studie_liv_div, #ansoeg_div{
