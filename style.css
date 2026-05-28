@@ -372,19 +372,31 @@ footer{
     background-color:#A60D0D;
     width:100%;
     height:25vh;
+    margin:0;
+    padding:0;
     display:flex;
+    flex-direction: column;
     overflow:hidden;
+}
+
+#footer_img_stack{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    height:100%;
+
 }
 
 #footer_controller{
     height:22vh;
-    margin-left:-1.5vw;
-    margin-top:8vh;
+    margin-left:-2.5vw;
+    margin-top:15vh;
     /*transform: translate(-1.5vw, 8vh);*/
 }
 
 #footer_dania_logo{
     height:8vh;
+    margin-left:-4vw;
 }
 
 /* From Uiverse.io by SelfMadeSystem */ 
