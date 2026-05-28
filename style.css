@@ -21,21 +21,21 @@ h1, p, h2{
 }
 
 
-/*header*/
+/*-----------------header-----------------*/
 
 #header{
     position:absolute;
     top:0;
     left:0;
     width:100%;
-    height:5vw;
+    height:14vh;
     background-color: #A60D0D;
     z-index: 100;
 }
 
 #dania_logo{
     padding:1vw;
-    height:3vw;
+    height:8vh;
 }
 
 #dania_logo:hover{
@@ -43,7 +43,7 @@ h1, p, h2{
     transition: 0.2s;
 }
 
-/*forside*/
+/*-----------------forside-----------------*/
 
 #foran_dania_container{
     width:100%;
@@ -59,7 +59,7 @@ h1, p, h2{
 }
 
 .btn{
-    /*rediger under her*/
+    /*-----------------rediger under her-----------------*/
     padding:1vw 2.5vw;
     background:#F21313;
     color:white;
@@ -126,7 +126,7 @@ transform:skew(-12deg) scale(0.96);
     transition: .2s;
 }
 
-#om_os_div, #studie_liv_div{
+#om_os_div, #studie_liv_div, #ansoeg_div{
     display: flex;
     flex-direction: row;
     gap:3vw;
@@ -169,7 +169,7 @@ transform:skew(-12deg) scale(0.96);
 }
 
 
-/*uddannelser div*/
+/*-----------------uddannelser div-----------------*/
 #uddannelser_div{
     width:100%;
     height:auto;
@@ -229,12 +229,12 @@ transform:skew(-12deg) scale(0.96);
     text-align: center;
 }
 
-/*studieliv*/
+/*-----------------studieliv-----------------*/
 #studie_liv_div{
     margin-top:10vh;
 }
 
-/*tidligere studernede*/
+/*-----------------tidligere studernede-----------------*/
 #tidligere_studerende_div{
     background-color: #ECECEC;
     width:100%;
@@ -278,6 +278,7 @@ transform:skew(-12deg) scale(0.96);
 #tidligere_studerende_text{
     margin-left: 2vw;
     margin-right:15vw;
+    max-width:48vw;
 }
 
 #projekt_display_controls{
@@ -288,6 +289,14 @@ transform:skew(-12deg) scale(0.96);
     gap:1vw;
     margin-top:5vh;
     align-items: center;
+}
+
+#tidligere_studerende_div h2{
+    position:relative;
+    z-index: 2;
+    margin-top:5vh;
+    font-size:2vw;
+    margin-bottom:0;
 }
 
 .dot{
@@ -303,12 +312,79 @@ transform:skew(-12deg) scale(0.96);
     width:2vw;
 }
 
+#company_display{
+    width:100%;
+    height: 20vh;
+    z-index: 6;
+    margin-top:3vh;
+    display:flex;
+    position: relative;
+    align-items: center;
+    overflow: hidden;
+}
+
+#company_background{
+    position: absolute;
+    inset: 0;
+    z-index: 6;
+    filter:opacity(50%) blur(30px);
+    background-color: black;
+}
+
+#company_logos{
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    width: max-content;
+    animation: logo-scroll 90s linear infinite;
+    position: relative;
+    z-index: 7;
+}
+
+#company_logos:hover{
+    animation-play-state: paused;
+}
+
+@keyframes logo-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+.company_logo_img{
+    position: relative;
+    z-index: 7;
+    height: 12vh;
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/*-----------------ANSØG-----------------*/
+
+#ansoeg_div{
+    margin-top:10vh;
+}
+
 /*bottom spacer*/
 
-#bottom_spacer{
-    display: block;
-    height:50vh;
+/*-----------------FOOTER-----------------*/
+footer{
+    background-color:#A60D0D;
     width:100%;
+    height:25vh;
+    display:flex;
+    overflow:hidden;
+}
+
+#footer_controller{
+    height:22vh;
+    margin-left:-1.5vw;
+    margin-top:8vh;
+    /*transform: translate(-1.5vw, 8vh);*/
+}
+
+#footer_dania_logo{
+    height:8vh;
 }
 
 /* From Uiverse.io by SelfMadeSystem */ 

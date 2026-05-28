@@ -19,8 +19,12 @@ function nav_interact(btnStr){
             document.getElementById("studie_liv_div").scrollIntoView({behavior: "smooth"});
             break;
 
+        case "nav_tidligere_studerende":
+            document.getElementById("tidligere_studerende_div").scrollIntoView({behavior: "smooth"});
+            break;
+
         case "nav_ansoeg":
-            window.location.href="ansoeg.html";
+            document.getElementById("ansoeg_div").scrollIntoView({behavior: "smooth"});
             break;
 
         default:
