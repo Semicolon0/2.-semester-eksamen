@@ -10,12 +10,43 @@
     text-align: center;
 }
 
+#ansoeg_container h2 {
+    font-size: 2vw;
+    margin-top: 4vh;
+    text-align: center;
+}
+
 #ansoeg_container p {
     font-size: 1.3vw;
     max-width: 60vw;
     text-align: center;
+    line-height: 1.5;
+}
+
+#ansoeg_container ul {
+    max-width: 60vw;
+    font-size: 1.2vw;
+    line-height: 1.5;
+}
+
+#ansoeg_container li {
+    margin-bottom: 0.5vh;
+    font-family: "Goldman", sans-serif;
 }
 
 #optagelse{
     margin-top:3vh;
+    margin-bottom:3vh;
+}
+
+#mail_link {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 1.7vw;
+    color: #F21313;
+}
+
+#mail_link:hover {
+    font-size: 1.8vw;
+    transition: .2s;
 }
