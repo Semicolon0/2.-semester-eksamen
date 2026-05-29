@@ -33,6 +33,10 @@ body .c{
     gap:10vw;
 }
 
+#uddannelser_display{
+    width:30vw;
+}
+
 #uddannelser_display h2{
     font-family: "Sixtyfour", sans-serif;
     color:white;
@@ -41,23 +45,34 @@ body .c{
     font-weight:400;
 }
 
-#uddannelse_selector{
+#uddannelser_display p{
+    font-family: "Sixtyfour", sans-serif;
+    color: white;
+}
+
+#uddannelse_selector_icons{
     display:flex;
     flex-direction: row;
     margin-top: 10vh;
     gap:3vw;
+    align-items: flex-start;
 }
 
 .udd_title_p{
     color:white;
     font-family: "Sixtyfour", sans-serif;
-    font-size:auto;
+    font-size:.6vw;
     text-shadow: 0 0 30px #19FF00;
     font-weight: 100;
+    margin-top: 2vh;
+}
+
+.selector_udd{
+    width:10vw;
 }
 
 .selector_img{
-    width:10vw;
+    width:100%;
     height:10vw;
     border: 5px solid white;
     box-shadow: 0 0 30px #19FF00;
@@ -65,8 +80,31 @@ body .c{
     transition: .2s;
 }
 
-.selector_img:hover{
-    transform: scale(1.1);
-    margin-bottom:2vh;
+.selector_img:hover,
+.selector_img.selected{
+    transform: scale(1.06);
     border-color:#19FF00;
+}
+
+.selector_img:active{
+    transform: scale(.9);
+}
+
+#selector_button{
+    margin:0;
+    margin-top:5vh;
+    background-color:#16dd00;
+    color:black;
+    font-family: "Sixtyfour";
+    font-weight: 600;
+
+    box-shadow:
+        0 0 .5vw #19FF00,
+        .4vw .4vw 0px darkgreen;
+}
+
+#selector_button:hover{
+    box-shadow: 
+        .6vw .6vw 0px darkgreen, 
+        0 0 .5vw #19FF00;
 }

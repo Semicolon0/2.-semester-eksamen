@@ -20,26 +20,32 @@
         <div>
             <div id="uddannelse_selector_div">
                 <div id="uddannelse_selector">
-                    <div id="selector_data" class="selector_udd">
-                        <img class="selector_img" src="Images/placeholder.png">
-                        <p class="udd_title_p">DATAMATIKER</p>
-                    </div>
+                    <div id="uddannelse_selector_icons">
+                        <div id="selector_data" class="selector_udd">
+                            <img class="selector_img" id="datamatikker_icon" src="Images/placeholder.png">
+                            <p class="udd_title_p">DATAMATIKER</p>
+                        </div>
 
-                    <div id="selector_data" class="selector_udd">
-                        <img class="selector_img" src="Images/placeholder.png">
-                        <p class="udd_title_p">MULTIMEDIE DESIGNER</p>
-                    </div>
+                        <div id="selector_mmd" class="selector_udd">
+                            <img class="selector_img" id="mmd_icon" src="Images/placeholder.png">
+                            <p class="udd_title_p">MULTIMEDIE DESIGNER</p>
+                        </div>
                     
-                    <div id="selector_data" class="selector_udd">
-                        <img class="selector_img" src="Images/placeholder.png">
-                        <p class="udd_title_p">SOFTWAREUDVIKLER</p>
+                        <div id="selector_soft" class="selector_udd">
+                            <img class="selector_img" id="softwareudvikler_icon" src="Images/placeholder.png">
+                            <p class="udd_title_p">SOFTWAREUDVIKLER</p>
+                        </div>
                     </div>
+                    <button class="btn" id="selector_button" onclick="open_dania_udd()">SELECT</button>
                 </div>
 
                 <div id="uddannelser_display">
-                    <h2>John Darksouls</h2>
+                    <h2 id="uddannelse_navn">John Darksouls</h2>
+                    <p id="uddannelse_beskrivelse">Noget tekst omkring uddannelsen, som er relevant men man kan</p>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="uddannelser.js"></script>
 </body>

@@ -32,3 +32,9 @@ function nav_interact(btnStr){
             break;
     }
 }
+
+
+function udd_btn_load(udd_navn){
+    localStorage.setItem("udd_navn", udd_navn);
+    window.location.href="uddannelser.html";
+}
