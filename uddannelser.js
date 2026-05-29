@@ -8,10 +8,6 @@ udd_picked(localStorage.getItem("udd_navn"));
 
 document.querySelectorAll('.selector_udd').forEach(function(btn){
     btn.addEventListener('click', function() {
-        document.querySelectorAll('.selector_img').forEach(function(img){
-            img.classList.remove('selected');
-        });
-        btn.querySelector('.selector_img').classList.add('selected');
         const btnStr = btn.getAttribute('id');
         udd_picked(btnStr);
     })
@@ -19,6 +15,12 @@ document.querySelectorAll('.selector_udd').forEach(function(btn){
 
 function udd_picked(btnStr)
 {
+    document.querySelectorAll('.selector_img').forEach(function(img){
+        img.classList.remove('selected');
+    });
+    const activeBtn = document.getElementById(btnStr);
+    if (activeBtn) activeBtn.querySelector('.selector_img').classList.add('selected');
+
     switch (btnStr) {
         case "selector_data":
             udd_navn.innerHTML = "DATAMATIKER";
