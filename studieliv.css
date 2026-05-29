@@ -56,3 +56,34 @@
     font-size: 1vw;
     line-height: 1.5;
 }
+
+#slider_billede {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.studieliv_img_card_div{
+    display:flex;
+    flex-direction: row;
+}
+
+.prev,
+.next {
+    border: none;
+    padding: 1vh 1vw;
+    cursor: pointer;
+    font-size: 2vw;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.prev {
+    left: 1vw;
+}
+
+.next {
+    right: 1vw;
+}
