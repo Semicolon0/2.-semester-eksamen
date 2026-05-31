@@ -21,20 +21,20 @@
 }
 
 #tidligere_content_container h1{
-    font-size:3vw;
+    font-size:clamp(22px, 3vw, 80px);
     margin-bottom:1vh;
 }
 
 #tidligere_content_container h2{
-    font-size:2vw;
+    font-size:clamp(16px, 2vw, 28px);
     margin-bottom:0;
 }
 
 #tidligere_content_container p{
     width:70%;
     overflow-wrap: break-word;
-    font-size:1.5vw;
-    margin-top: 1vh;
+    font-size:clamp(13px, 1.5vw, 32px);
+    margin-top: 2vh;
 }
 
 #studerende_projekter{
@@ -43,6 +43,7 @@
 
 #student_project_card{
     justify-content: center;
+    margin-bottom:0vw;
 }
 
 #prj_images{
@@ -55,16 +56,21 @@
 }
 
 #tidl_prj_img{
+    display:block;
     object-fit: cover;
     width:30vw;
-    height:35vh;
+    height:auto;
+    aspect-ratio: 16/9;
 }
 
 .tidl_prj_img_secondary{
+    display:block;
     filter:brightness(80%);
     transform: scale(1.05);
     width:20vw;
-    height:25vh;
+    height:auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
     transition: .2s;
     cursor:pointer;
 }
@@ -132,4 +138,26 @@
 #prj_more_btn{
     margin-top: 3vh;
     margin-bottom: 20vh;
+}
+
+/* ============================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================ */
+
+@media (max-width: 900px) {
+    /* Hide side images, widen the main one */
+    .tidl_prj_img_secondary {
+        display: none;
+    }
+    #tidl_prj_img {
+        width: 80vw;
+    }
+    .prj_change_btn {
+        font-size: clamp(16px, 4vw, 32px);
+        width: clamp(28px, 6vw, 48px);
+        height: clamp(28px, 6vw, 48px);
+    }
+    #tidligere_content_container p {
+        width: 86%;
+    }
 }

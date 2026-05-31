@@ -23,7 +23,7 @@ body .c{
     font-family: "Sixtyfour", sans-serif;
     color:white;
     text-shadow: 0 0 30px #19FF00;
-    font-size:3vw;
+    font-size:clamp(22px, 3vw, 42px);
     font-weight:400;
 }
 
@@ -41,7 +41,7 @@ body .c{
     font-family: "Sixtyfour", sans-serif;
     color:white;
     text-shadow: 0 0 30px #19FF00;
-    font-size:2vw;
+    font-size:clamp(16px, 2vw, 28px);
     font-weight:400;
 }
 
@@ -61,7 +61,7 @@ body .c{
 .udd_title_p{
     color:white;
     font-family: "Sixtyfour", sans-serif;
-    font-size:.6vw;
+    font-size:clamp(12px, 1vw, 32px);
     text-shadow: 0 0 30px #19FF00;
     font-weight: 100;
     margin-top: 2vh;
@@ -107,4 +107,37 @@ body .c{
     box-shadow: 
         .6vw .6vw 0px darkgreen, 
         0 0 .5vw #19FF00;
+}
+
+/* ============================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================ */
+
+@media (max-width: 900px) {
+    #uddannelse_selector_div {
+        flex-direction: column;
+        align-items: center;
+        gap: 5vh;
+    }
+    #uddannelser_display {
+        width: 80vw;
+    }
+    .selector_udd {
+        width: 22vw;
+    }
+    .selector_img {
+        height: 22vw;
+    }
+}
+
+@media (max-width: 600px) {
+    #uddannelse_selector_icons {
+        gap: 5vw;
+    }
+    .selector_udd {
+        width: 28vw;
+    }
+    .selector_img {
+        height: 28vw;
+    }
 }

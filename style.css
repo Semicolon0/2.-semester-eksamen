@@ -10,10 +10,14 @@
   font-style: normal;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body{
     padding: 0;
     margin: 0;
-    padding-top: 5vw;
+    overflow-x: hidden;
 }
 
 h1, p, h2{
@@ -24,18 +28,19 @@ h1, p, h2{
 /*-----------------header-----------------*/
 
 #header{
-    position:absolute;
+    position: sticky;
     top:0;
     left:0;
     width:100%;
-    height:14vh;
+    height:auto;
     background-color: #A60D0D;
     z-index: 100;
 }
 
 #dania_logo{
     padding:1vw;
-    height:8vh;
+    height: clamp(32px, 5vw, 64px);
+    width: auto;
     transition: 0.2s;
 }
 
@@ -60,11 +65,11 @@ h1, p, h2{
 
 .btn{
     /*-----------------rediger under her-----------------*/
-    padding:1vw 2.5vw;
+    padding:clamp(12px, 1.2vw, 18px) clamp(24px, 3vw, 44px);
     background:#F21313;
     color:white;
 
-    font-size:1vw;
+    font-size:clamp(14px, 1.2vw, 18px);
     font-weight:bold;
     text-transform:uppercase;
     letter-spacing:0.1vw;
@@ -108,14 +113,14 @@ transform:skew(-12deg) scale(0.96);
 }
 
 .nav_btn{
-    width:12vw;
-    height:4vw;
+    width:clamp(100px, 12vw, 300px);
+    height:clamp(32px, 4vw, 100px);
     border-radius: 100px;
     border:none;
     background-color: #F21313;
     color:white;
     cursor:pointer;
-    font-size:1.2vw; 
+    font-size:clamp(11px, 1.2vw, 24px);
     font-family: "goldman", sans-serif;
     transition: .2s;
 }
@@ -132,20 +137,22 @@ transform:skew(-12deg) scale(0.96);
     gap:3vw;
 
     width:70vw;
-    height:50vh;
+    height: auto;
+    min-height: 20vw;
     margin: 0 auto;
     padding: 1vw 0;
 }
 
 .info_img_container{
     width:30vw;
-    height:40vh;
 }
 
 .info_img{
-    object-fit:cover;
+    display:block;
     width:100%;
-    height:100%;
+    height:auto;
+    aspect-ratio: 4/3;
+    object-fit:cover;
 }
 
 .info_text_container{
@@ -155,12 +162,12 @@ transform:skew(-12deg) scale(0.96);
 }
 
 .info_text_container h1{
-    font-size:3vw;
+    font-size:clamp(28px, 3vw, 46px);
     margin:0;
 }
 
 .info_text_container p{
-    font-size:1vw;
+    font-size:clamp(15px, 1.1vw, 38px);
     margin-bottom: 3vw;
 }
 
@@ -191,19 +198,18 @@ transform:skew(-12deg) scale(0.96);
 
 #uddannelser_div h1{
     color:white;
-    font-size: 5vw;
+    font-size: clamp(28px, 5vw, 72px);
     position: relative;
     z-index: 2;
 }
 
 #uddannelser_div h2{
     color:white;
-    font-size: 2vw;
-    margin-bottom:.5vw;
-    padding: 0%;
+    font-size: clamp(16px, 1.4vw, 48px);
 }
 
 #uddannelser_div p{
+    font-size:clamp(15px, 1.1vw, 38px);
     color:white;
     margin-top:0;
     margin-bottom:5vh;
@@ -219,8 +225,11 @@ transform:skew(-12deg) scale(0.96);
 }
 
 .uddannelser_img{
+    display:block;
     width: 100%;
-    height:40vh; /*skal være auto senere*/
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: cover;
 }
 
 .uddannelser_uddannelse_div{
@@ -262,7 +271,7 @@ transform:skew(-12deg) scale(0.96);
 #tidligere_studerende_div h1{
     position: relative;
     z-index: 2;
-    font-size: 4vw;
+    font-size: clamp(24px, 4vw, 58px);
 }
 
 #tidligere_studerende_projekt_display{
@@ -281,21 +290,11 @@ transform:skew(-12deg) scale(0.96);
     max-width:48vw;
 }
 
-#projekt_display_controls{
-    position: relative;
-    z-index: 2;
-    display:flex;
-    flex-direction: row;
-    gap:1vw;
-    margin-top:5vh;
-    align-items: center;
-}
-
 #tidligere_studerende_div h2{
     position:relative;
     z-index: 2;
     margin-top:5vh;
-    font-size:2vw;
+    font-size:clamp(16px, 1.4vw, 48px);
     margin-bottom:0;
 }
 
@@ -373,6 +372,7 @@ footer{
     width:100%;
     height:25vh;
     margin:0;
+    margin-top:5vh;
     padding:0;
     display:flex;
     flex-direction: column;
@@ -388,14 +388,15 @@ footer{
 }
 
 #footer_controller{
-    height:22vh;
+    height: clamp(60px, 14vw, 180px);
+    width: auto;
     margin-left:-2.5vw;
     margin-top:15vh;
-    /*transform: translate(-1.5vw, 8vh);*/
 }
 
 #footer_dania_logo{
-    height:8vh;
+    height: clamp(28px, 5vw, 64px);
+    width: auto;
     margin-left:-4vw;
 }
 
@@ -592,4 +593,89 @@ More comprehensive version at shenanigans.shoghisimon.ca/collection/css-rain-bg/
       278px 6375px,
       426.5px 6480px;
   }
+}
+
+/* ============================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+    /* --- Nav --- */
+    #nav_button_div {
+        flex-wrap: wrap;
+        gap: 2.5vw;
+    }
+    .nav_btn {
+        width: 40vw;
+        height: 8vw;
+        font-size: clamp(12px, 2vw, 18px);
+    }
+
+    /* --- Info sections (om os / studie liv / ansøg on index) --- */
+    #om_os_div, #studie_liv_div, #ansoeg_div {
+        flex-direction: column;
+        width: 86vw;
+        min-height: unset;
+        align-items: center;
+    }
+    .info_img_container {
+        width: 80vw;
+    }
+    .info_text_container {
+        width: 80vw;
+        align-items: center;
+        text-align: center;
+    }
+    .info_text_container h1 {
+        font-size: clamp(24px, 5vw, 42px);
+    }
+    .info_text_container p {
+        font-size: clamp(13px, 2vw, 26px);
+    }
+
+    /* --- Uddannelser cards: stack vertically --- */
+    #uddannelser_img_div {
+        flex-direction: column;
+        align-items: center;
+        gap: 6vw;
+    }
+    .uddannelser_uddannelse_div {
+        width: 70vw;
+    }
+
+    /* --- Tidligere studerende section --- */
+    #tidligere_studerende_projekt_display {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+    #tidligere_studerende_text {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 86vw;
+        align-items: center;
+        text-align: center;
+    }
+    .display_arrow {
+        width: clamp(16px, 3vw, 28px);
+    }
+    .dot {
+        width: clamp(8px, 1.5vw, 14px);
+        height: clamp(8px, 1.5vw, 14px);
+    }
+}
+
+@media (max-width: 600px) {
+    .nav_btn {
+        width: 44vw;
+        height: 10vw;
+        font-size: clamp(11px, 2.5vw, 16px);
+    }
+    .info_img_container {
+        width: 92vw;
+    }
+    .info_text_container {
+        width: 92vw;
+    }
 }
