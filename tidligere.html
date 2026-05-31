@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="load_project_details()">
     <div id="tidligere_baggrund" class="c"></div>
     <div id="header">
            <a href="index.html">
@@ -18,10 +18,6 @@
     <div id="tidligere_content_container">
         <h1>TIDLIGERE STUDERENDE</h1>
         <p>Her er noget tekst omkring hvad tidligere studerende har arbejdet på og hvor der arbejder nu, for at inspirere potentielle elever, forældre eller andre der gern vil se hvad uddannelsen kan</p>
-
-        <div id="studerende_projekter">
-            <div id="student_project_card"></div>
-        </div>
 
         <h2>HER ARBEJDER VORES TIDLIGERE STUDERENDE</h2>
 
@@ -116,7 +112,30 @@
             </div>
         </div>
 
+        <div id="studerende_projekter">
+            <div id="student_project_card">
+                <h1 id="prj_name">PROJEKT NAVN</h1>
+                <div id="prj_images">
+                    <button id="prev_btn" class="prj_change_btn" onclick="change_prj('left')">&#10094;</button>
+                    <img class="tidl_prj_img_secondary" id="prev_img" onclick="change_prj('left')" src="Images/tidl_img_test3.png"></img>
+                    <img id="tidl_prj_img" src="Images/tidl_img_test1.jpg"></img>
+                    <img class="tidl_prj_img_secondary" id="next_img" onclick="change_prj('right')" src="Images/tidl_img_test2.jpg"></img>
+                    <button id="next_btn" class="prj_change_btn" onclick="change_prj('right')">&#10095;</button>
+                </div>
+                <p id="prj_desc">Det her er et projekt som en studerende har lavet, og vi har noget tekst som er relevant for projektet, men jeg har ikke noget lige nu, så det der må bare stå det her itedet for så jeg ved at det virker</p>
+                <button class="btn" id="prj_more_btn">LÆS MERE</button>
+            </div>
+        </div>
+
     </div>
 
-
 </body>
+
+<footer>
+    <div id="footer_img_stack">
+        <img id="footer_controller" src="Images/Controller rød.png">
+        <img id="footer_dania_logo" src="Images/Dania-logo-hvid.svg">
+    </div>
+
+    <script src="tidligere.js"></script>
+</footer>
