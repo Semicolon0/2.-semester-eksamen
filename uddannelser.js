@@ -38,7 +38,7 @@ function udd_picked(btnStr) //funktion der opdaterer siden med information om de
             udd_navn.innerHTML = "SOFTWAREUDVIKLER"; //sætter titlen til softwareudvikler
             udd_beskrivelse.innerHTML = "Overbygningen til dig, der vil helt i top som it-arkitekt. Her bygger du videre på din datamatiker og nørder store komplekse datasystemer, cloud computing, spilmotorer og avanceret softwareudvikling. Bliv klar til de mest krævende tech- og spiljobs.";
             site_link = "https://eadania.dk/efteruddannelse/diplomuddannelser/softwareudvikling/"; //gemmer linket til softwareudviklersiden
-
+            break;
 
         default:
             console.log("An error occured"); //udskriver en fejlbesked i konsollen hvis ingen case matcher
