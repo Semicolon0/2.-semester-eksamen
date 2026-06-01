@@ -654,15 +654,38 @@ More comprehensive version at shenanigans.shoghisimon.ca/collection/css-rain-bg/
 
     /* --- Tidligere studerende section --- */
     #tidligere_studerende_projekt_display {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas:
+            "left img right"
+            ". text .";
         align-items: center;
-        margin-left: 0;
+        justify-items: center;
+        gap: 1vw;
+        width: 96vw;
+        margin: 0 auto;
+    }
+    #tidligere_studerende_projekt_display .prj_change_btn:first-child {
+        grid-area: left;
+    }
+    #tidligere_studerende_projekt_display .info_img_container {
+        grid-area: img;
+        width: 100%;
+    }
+    #tidligere_studerende_projekt_display #tidligere_studerende_text {
+        grid-area: text;
+    }
+    #tidligere_studerende_projekt_display .prj_change_btn:last-child {
+        grid-area: right;
     }
     #tidligere_studerende_text {
         margin-left: 0;
         margin-right: 0;
         max-width: 86vw;
         align-items: center;
+        text-align: center;
+    }
+    #tidligere_studerende_div h2 {
         text-align: center;
     }
     .display_arrow {
