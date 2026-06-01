@@ -224,6 +224,25 @@ transform:skew(-12deg) scale(0.96);
     z-index: 2;
 }
 
+.udd_btn{
+    margin:0;
+    margin-top:5vh;
+    background-color:#16dd00;
+    color:black;
+    font-family: "Sixtyfour";
+    font-weight: 300;
+
+    box-shadow:
+        0 0 .5vw #19FF00,
+        .4vw .4vw 0px darkgreen;
+}
+
+.udd_btn:hover{
+    box-shadow: 
+        .6vw .6vw 0px darkgreen, 
+        0 0 .5vw #19FF00;
+}
+
 .uddannelser_img{
     display:block;
     width: 100%;
