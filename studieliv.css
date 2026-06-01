@@ -19,22 +19,27 @@
     font-size: clamp(13px, 1.3vw, 44px);
     line-height: 1.6;
 
-    margin-bottom: 5vh;
+    margin-bottom: 15vh;
 }
 
 .studie_kort {
     display: flex;
-    gap: 3vw;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     width: 90%;
 }
 
 .kort{
+    display:flex;
+    flex-direction: row;
     width:45vw;
     border-radius: 15px;
     padding-bottom: 2vh;
     transition: 0.3s;
+    align-items: center;
+    justify-content: center;
 }
 
 .kort_img {
@@ -42,64 +47,76 @@
     height: auto;
     border-radius:15px;
     padding-bottom:2vh;
+    aspect-ratio: 16/9;
+    object-fit: cover;
 }
 
-.kort h2 {
+.studie_kort h2 {
     text-align:center;
-    margin-top: 2vh;
-    font-size: clamp(16px, 2vw, 28px);
+    font-size: clamp(16px, 2vw, 52px);
+    margin:0;
+    margin-top:10vh;
 }
 
-.kort p {
+.studie_kort p {
     text-align: center;
-    padding: 0 1vw;
     font-size: clamp(12px, 1.1vw, 36px);
     line-height: 1.5;
-}
-
-#slider_billede {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom:1vh;
 }
 
 .studieliv_img_card_div{
     display:flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 
-.prev,
-.next {
-    border: none;
-    padding: 1vh 1vw;
-    cursor: pointer;
-    font-size: 2vw;
-    border-radius: 10px;
-    transition: 0.3s;
-}
+.image_container{
+    width:45vw;
 
-.prev {
-    left: 1vw;
-}
-
-.next {
-    right: 1vw;
 }
 
 /* ============================================================
    RESPONSIVE BREAKPOINTS
    ============================================================ */
 
+@media (max-width: 900px) {
+    .kort {
+        width: 70vw;
+    }
+    .image_container {
+        width: 70vw;
+    }
+}
+
 @media (max-width: 700px) {
     .kort {
-        width: 85vw;
+        width: 88vw;
+    }
+    .image_container {
+        width: 88vw;
     }
     .intro_text {
         max-width: 88vw;
     }
     .studie_kort {
         width: 100%;
+    }
+    .studie_kort h2 {
+        margin-top: 6vh;
+    }
+    .studieliv_img_card_div {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .kort {
+        width: 95vw;
+    }
+    .image_container {
+        width: 78vw;
     }
 }

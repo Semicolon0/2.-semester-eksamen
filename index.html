@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
     <title>Dania Games</title>
 </head>
-<body>
+<body onload="change_prj('det er ligegyldigt hvad det her er')">
     <div id="header">
         <a href="index.html">
             <img id="dania_logo" src="images/Dania-logo-hvid.svg">
@@ -85,16 +85,18 @@
         <h1>TIDLIGERE STUDERENDE</h1>
         
         <div id="tidligere_studerende_projekt_display">
+            <button id="next_btn" class="prj_change_btn" onclick="change_prj('left')">&#10094;</button>
             <div class="info_img_container">
-                <img class="info_img" src="images/placeholder.png" loading="lazy">
+                <img class="info_img" id="prj_img" src="images/placeholder.png" loading="lazy">
             </div>
             <div class="info_text_container" id="tidligere_studerende_text">
-                <h1>Projekt navn</h1>
-                <p>noget mere info om projektet.noget mere info om projektetnoget mere info om projektetnoget mere info om projektetnoget mere info om projektetnoget mere info om projektetnoget mere info om projektetnoget mere info om projektetnoget mere info om projektet</p>
+                <h1 id="prj_title">Projekt navn</h1>
+                <p id="prj_desc">noget mere info om projektet.noget mere info om projektetnoget mere info om projektetnoget mere info om projektetnoget mere info om projektetnoget mere info om projektetnoget mere info om projektetnoget mere info om projektetnoget mere info om projektet</p>
                 <a href="tidligere.html">
-                    <button class="btn" id="studie_liv_btn">LÆS MERE</button>
+                    <button class="btn" id="tidligere_btn">LÆS MERE</button>
                 </a>
             </div>
+            <button id="next_btn" class="prj_change_btn" onclick="change_prj('right')">&#10095;</button>
         </div>
 
         <h2>HER ARBEJDER VORES TIDLIGERE STUDERENDE</h2>
@@ -189,6 +191,10 @@
                 <a href="https://trophy-games.com/" target="_blank"><img class="company_logo_img" aria-hidden="true" src="Images/company_logos/partner_TrophyGames.png"></a>
             </div>
         </div>
+
+        <a href="tidligere.html">
+            <button class="btn" id="tidligere_read_more">LÆS MERE</button>
+        </a>
     </div>
 
     <div id="ansoeg_div">
