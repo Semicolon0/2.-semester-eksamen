@@ -26,21 +26,21 @@ function udd_picked(btnStr) //funktion der opdaterer siden med information om de
         case "selector_data":
             udd_navn.innerHTML = "DATAMATIKER"; //sætter titlen til datamatiker
             udd_beskrivelse.innerHTML ="Din vej til spilbranchens maskinrum. Som datamatiker hos Dania Games lærer du den tunge kode bag spillene, fra AI og fysik til spilmotorer og netværk. Du får en klassisk, stærk it-uddannelse, men med fuldt fokus på spiludvikling. Byg dine egne spil, samarbejd i teams, og scor dit drømmejob i tech- eller spilindustrien."
-            udd_billede.src="Images/Datamatiker.png";
+            udd_billede.src="images/Datamatiker.png";
             site_link = "https://eadania.dk/uddannelser/datamatiker/"; //gemmer linket til datamatikersiden
             break;
 
         case "selector_mmd":
             udd_navn.innerHTML = "MULTIMEDIE DESIGNER"; //sætter titlen til multimediedesigner
             udd_beskrivelse.innerHTML = "Træd ind i spilbranchens kreative hjerte. Som multimediedesigner lærer du at designe brugergrænseflader (UI), skabe fængende brugeroplevelser (UX) og markedsføre spil. Du bliver bindeleddet mellem kode, grafik og forretning i spilprojekterne.";
-            udd_billede.src="Images/multimediedesigner.png";
+            udd_billede.src="images/multimediedesigner.png";
             site_link = "https://eadania.dk/uddannelser/multimediedesigner/"; //gemmer linket til multimediedesignersiden
             break;
 
         case "selector_soft":
             udd_navn.innerHTML = "SOFTWAREUDVIKLER"; //sætter titlen til softwareudvikler
             udd_beskrivelse.innerHTML = "Overbygningen til dig, der vil helt i top som it-arkitekt. Her bygger du videre på din datamatiker og nørder store komplekse datasystemer, cloud computing, spilmotorer og avanceret softwareudvikling. Bliv klar til de mest krævende tech- og spiljobs.";
-             udd_billede.src="Images/softwareudvikler.png";
+             udd_billede.src="images/softwareudvikler.png";
             site_link = "https://eadania.dk/efteruddannelse/diplomuddannelser/softwareudvikling/"; //gemmer linket til softwareudviklersiden
             break;
 

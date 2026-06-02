@@ -71,7 +71,7 @@ function change_prj(dir){ //funktion der skifter projekt baseret på retning ("l
     }
 
     const len = prj_images.length; //gemmer antallet af projekter
-    current_img.src = `/Images/tidl_prj_images/${prj_images[current_prj_num]}`; //opdaterer billedkilden til det aktive projekt
+    current_img.src = `images/tidl_prj_images/${prj_images[current_prj_num]}`; //opdaterer billedkilden til det aktive projekt
     prj_title.innerHTML = prj_names[current_prj_num]; //opdaterer titlen til det aktive projekt
     prj_desc.innerHTML = prj_descs[current_prj_num]; //opdaterer beskrivelsen til det aktive projekt
 }
