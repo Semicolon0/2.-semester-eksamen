@@ -16,6 +16,12 @@
     text-align: center;
 }
 
+#omos_container video{
+    margin-top: 5vh;
+    border-radius:10px;
+    width:30vw;
+}
+
 @media (max-width: 700px) {
     #omos_container p {
         max-width: 88vw;

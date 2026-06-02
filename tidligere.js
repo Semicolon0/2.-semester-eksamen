@@ -1,10 +1,12 @@
-const prj_images = ["tidl_img_test1.jpg", "tidl_img_test2.jpg", "tidl_img_test3.png"] //liste over projekternes billedfiler
-const prj_names = ["Projekt 1", "Projekt 2", "Projekt3"]; //liste over projekternes navne
-const prj_descs =[
-    "Det her en beskrivelse til projekt 1, der er ikke noget konkret endnu men det er for at teste",
-    "PROJEKT 2. WOW DET HER ER DET VILDEST PROJEKT DER NOGENSINDE ER LAVET, MIN VERDEN VILLE IKKE VÆRE DET SAMME HVIS DET IKKE FANDTES!",
-    "projekt 3 er lidt eh, men vi valgte at tilføje det her alligevel. Det er ikke så godt, men det er et projekt..."
+const prj_images = ["scrith.jpg", "fixpert.jpg", "starshapes.jpg", "godstone.jpg"] //liste over projekternes billedfiler
+const prj_names = ["Scritchy Scrath", "Fixpert", "Star shapes", "Godstone"]; //liste over projekternes navne
+const prj_descs = [
+    "Scritchy Scratchy is a super-satisfying scratch card incremental game. Buy stacks of scratch-offs, unlock auto-scratching, and chase massive jackpots. Will you play it safe or go all-in?",
+    "Fixpert is a classic block-pusher style puzzle game. Help the titular Fixpert repair the factory and solve it's many head-scratching brain teasers! Using crates as bridges to cross bodies of water, buttons to open doors and power battery-chargers, managing fires and explosives, AND MORE!",
+    "Shapes become stars become constellations. Connect them all.",
+    "Wield magic and weaponry in this roguelike dungeoncrawler, forge powerful builds and explore a story from multiple perspectives. The end goal: Claim the Godstone before those who would use it to destroy your kind."
 ] //liste over projekternes beskrivelser
+const prj_link = ["https://store.steampowered.com/app/3948120/Scritchy_Scratchy/", "https://store.steampowered.com/app/4626570/Fixpert/", "https://store.steampowered.com/app/2386910/Starshapes/", "https://store.steampowered.com/app/1715030/Godstone/"]; //liste over links til projekterne
 
 const current_img = document.getElementById("tidl_prj_img"); //henter det store projektbillede fra HTML
 const prev_img = document.getElementById("prev_img"); //henter billedet til venstre (forrige projekt)
@@ -17,7 +19,10 @@ let current_prj_num = 0; //holder styr på hvilket projektnummer der vises lige 
 
 function load_project_details(){ //funktion der opdaterer titel og beskrivelse med det aktive projekt
     prj_name.innerHTML = prj_names[current_prj_num]; //sætter titlen til det aktive projekts navn
-    prj_desc.innerHTML =prj_descs[current_prj_num]; //sætter beskrivelsen til det aktive projekts tekst
+    prj_desc.innerHTML = prj_descs[current_prj_num]; //sætter beskrivelsen til det aktive projekts tekst
+    current_img.src = "Images/tidl_prj_images/scrith.jpg";
+    next_img.src = "Images/tidl_prj_images/fixpert.jpg";
+    prev_img.src = "Images/tidl_prj_images/godstone.jpg";
 }
 
 const ANIM_MS = 200; //varighed af animationen i millisekunder
@@ -42,9 +47,9 @@ function change_prj(dir){ //funktion der skifter projekt med en glidende animati
         }
 
         const len = prj_images.length; //gemmer det samlede antal projekter
-        current_img.src = `Images/${prj_images[current_prj_num]}`; //opdaterer det store billede til det aktive projekt
-        prev_img.src    = `Images/${prj_images[(current_prj_num - 1 + len) % len]}`; //sætter forrige-billedet til projektet til venstre (med wrap-around)
-        next_img.src    = `Images/${prj_images[(current_prj_num + 1) % len]}`; //sætter næste-billedet til projektet til højre (med wrap-around)
+        current_img.src = `Images/tidl_prj_images/${prj_images[current_prj_num]}`; //opdaterer det store billede til det aktive projekt
+        prev_img.src    = `Images/tidl_prj_images/${prj_images[(current_prj_num - 1 + len) % len]}`; //sætter forrige-billedet til projektet til venstre (med wrap-around)
+        next_img.src    = `Images/tidl_prj_images/${prj_images[(current_prj_num + 1) % len]}`; //sætter næste-billedet til projektet til højre (med wrap-around)
         prj_name.innerHTML = prj_names[current_prj_num]; //opdaterer titlen til det aktive projekt
         prj_desc.innerHTML = prj_descs[current_prj_num]; //opdaterer beskrivelsen til det aktive projekt
 
@@ -54,4 +59,8 @@ function change_prj(dir){ //funktion der skifter projekt med en glidende animati
 
         setTimeout(() => current_img.classList.remove(inClass), ANIM_MS); //fjerner ind-animationsklassen når den er færdig
     }, ANIM_MS);
+}
+
+function go_to_prj(){
+    window.open(prj_link[current_prj_num]);
 }
