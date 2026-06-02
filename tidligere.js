@@ -47,9 +47,9 @@ function change_prj(dir){ //funktion der skifter projekt med en glidende animati
         }
 
         const len = prj_images.length; //gemmer det samlede antal projekter
-        current_img.src = `Images/tidl_prj_images/${prj_images[current_prj_num]}`; //opdaterer det store billede til det aktive projekt
-        prev_img.src    = `Images/tidl_prj_images/${prj_images[(current_prj_num - 1 + len) % len]}`; //sætter forrige-billedet til projektet til venstre (med wrap-around)
-        next_img.src    = `Images/tidl_prj_images/${prj_images[(current_prj_num + 1) % len]}`; //sætter næste-billedet til projektet til højre (med wrap-around)
+        current_img.src = `images/tidl_prj_images/${prj_images[current_prj_num]}`; //opdaterer det store billede til det aktive projekt
+        prev_img.src    = `images/tidl_prj_images/${prj_images[(current_prj_num - 1 + len) % len]}`; //sætter forrige-billedet til projektet til venstre (med wrap-around)
+        next_img.src    = `images/tidl_prj_images/${prj_images[(current_prj_num + 1) % len]}`; //sætter næste-billedet til projektet til højre (med wrap-around)
         prj_name.innerHTML = prj_names[current_prj_num]; //opdaterer titlen til det aktive projekt
         prj_desc.innerHTML = prj_descs[current_prj_num]; //opdaterer beskrivelsen til det aktive projekt
 
