@@ -20,9 +20,9 @@ let current_prj_num = 0; //holder styr på hvilket projektnummer der vises lige 
 function load_project_details(){ //funktion der opdaterer titel og beskrivelse med det aktive projekt
     prj_name.innerHTML = prj_names[current_prj_num]; //sætter titlen til det aktive projekts navn
     prj_desc.innerHTML = prj_descs[current_prj_num]; //sætter beskrivelsen til det aktive projekts tekst
-    current_img.src = "Images/tidl_prj_images/scrith.jpg";
-    next_img.src = "Images/tidl_prj_images/fixpert.jpg";
-    prev_img.src = "Images/tidl_prj_images/godstone.jpg";
+    current_img.src = "images/tidl_prj_images/scrith.jpg";
+    next_img.src = "images/tidl_prj_images/fixpert.jpg";
+    prev_img.src = "images/tidl_prj_images/godstone.jpg";
 }
 
 const ANIM_MS = 200; //varighed af animationen i millisekunder
