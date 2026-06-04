@@ -46,7 +46,7 @@
     width: 100%;
     height: auto;
     border-radius:15px;
-    padding-bottom:2vh;
+    margin-bottom:2vh;
     aspect-ratio: 16/9;
     object-fit: cover;
 }
