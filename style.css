@@ -14,30 +14,59 @@ html {
     overflow-x: hidden;
 }
 
-body{
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-}
 
 h1, p, h2{
-    font-family: "goldman", sans-serif;
+    font-family: var(--body_font);
 }
 
 img{
     border-radius: 10px;
 }
 
+:root {
+    --bg_color: white;
+    --text_color: rgb(0, 0, 0);
+    --tidl_bg: #ECECEC;
+    --tidl_trails: #ffffff;
+    --company_bg: black;
+    --body_font: "goldman", sans-serif;
+
+}
+
+html.dyslexia_mode{
+    --body_font: "Lexend deca", sans-serif;
+}
+
+html.dark_mode{
+    --bg_color: rgb(24, 24, 24);
+    --text_color: white;
+    --tidl_bg: #202223;
+    --tidl_trails: #161718;
+    --company_bg:#6c6c6c;
+}
+
+
+body{
+    padding: 0;
+    padding-top: calc(clamp(32px, 5vw, 64px) + 2vw);
+    margin: 0;
+    overflow-x: hidden;
+    background-color: var(--bg_color);
+}
 /*-----------------header-----------------*/
 
 #header{
-    position: sticky;
+    position: fixed;
     top:0;
     left:0;
     width:100%;
     height:auto;
     background-color: #A60D0D;
     z-index: 100;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #dania_logo{
@@ -49,6 +78,33 @@ img{
 
 #dania_logo:hover{
     transform: scale(0.9);
+}
+
+#toggles{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    margin-right:2vw;
+    gap:2vw;
+}
+
+#theme_toggle{
+    height: clamp(32px, 6vw, 52px);
+    width: auto;
+    transition: 0.2s;
+}
+
+#dyslexia_toggle{
+    height: clamp(32px, 6vw, 52px);
+    width: auto;
+    filter:invert();
+    transition: 0.2s;
+    border-radius: 6px;
+}
+
+#dyslexia_toggle:hover, #theme_toggle:hover{
+    transform: scale(0.9);
+    cursor:pointer;
 }
 
 /*-----------------forside-----------------*/
@@ -126,7 +182,7 @@ transform:skew(-12deg) scale(0.96);
     color:white;
     cursor:pointer;
     font-size:clamp(11px, 1.2vw, 24px);
-    font-family: "goldman", sans-serif;
+    font-family: var(--body_font);
     transition: .2s;
 }
 
@@ -146,6 +202,8 @@ transform:skew(-12deg) scale(0.96);
     min-height: 20vw;
     margin: 0 auto;
     padding: 1vw 0;
+    color: var(--text_color);
+    
 }
 
 .info_img_container{
@@ -169,6 +227,7 @@ transform:skew(-12deg) scale(0.96);
 .info_text_container h1{
     font-size:clamp(28px, 3vw, 46px);
     margin:0;
+    color: var(--text_color);
 }
 
 .info_text_container p{
@@ -235,7 +294,7 @@ transform:skew(-12deg) scale(0.96);
     margin-top:5vh;
     background-color:#16dd00;
     color:black;
-    font-family: "Goldman";
+    font-family: var(--body_font);
 
     box-shadow:
         0 0 .5vw #19FF00,
@@ -254,6 +313,12 @@ transform:skew(-12deg) scale(0.96);
     height: auto;
     aspect-ratio: 4/3;
     object-fit: cover;
+    cursor:pointer;
+}
+
+.uddannelser_img:hover{
+    transform: scale(1.06); 
+    transition: 0.2s;
 }
 
 .uddannelser_uddannelse_div{
@@ -284,8 +349,8 @@ transform:skew(-12deg) scale(0.96);
 }
 
 #tidligere_studerende_div .c{
-    background-color: #ECECEC;
-    --c: #ffffff;
+    background-color: var(--tidl_bg);
+    --c: var(--tidl_trails);
 }
 
 #tidligere_studerende_div::after{
@@ -296,6 +361,7 @@ transform:skew(-12deg) scale(0.96);
     position: relative;
     z-index: 2;
     font-size: clamp(24px, 4vw, 58px);
+    color: var(--text_color);
 }
 
 #tidligere_studerende_projekt_display{
@@ -312,6 +378,7 @@ transform:skew(-12deg) scale(0.96);
 #tidligere_studerende_text{
     margin-left: 2vw;
     max-width:48vw;
+    color: var(--text_color);
 }
 
 #tidligere_studerende_div h2{
@@ -320,6 +387,7 @@ transform:skew(-12deg) scale(0.96);
     margin-top:5vh;
     font-size:clamp(16px, 1.4vw, 48px);
     margin-bottom:0;
+    color: var(--text_color);
 }
 
 .prj_change_btn {
@@ -331,6 +399,7 @@ transform:skew(-12deg) scale(0.96);
     font-size: 3vw;
     border-radius: 100px;
     transition: 0.2s;
+    color: var(--text_color);
 }
 
 .prj_change_btn:hover{
@@ -359,7 +428,7 @@ transform:skew(-12deg) scale(0.96);
     inset: 0;
     z-index: 6;
     filter:opacity(50%) blur(30px);
-    background-color: black;
+    background-color: var(--company_bg);
 }
 
 #company_logos{

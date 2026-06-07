@@ -10,13 +10,17 @@
     <link rel="icon" type="image/x-icon" href="images/Controller rød.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Lexend+Deca:wght@100..900&family=Sixtyfour&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="header">
-           <a href="index.html">
+      <div id="header">
+        <a href="index.html">
             <img id="dania_logo" src="images/Dania-logo-hvid.svg" alt="Dania logo">
         </a>
+        <div id="toggles">
+            <img id="dyslexia_toggle" src="images/dyslexia.png" onclick="dyslexia_toggle()" alt="dyslexia toggle button">
+            <img id="theme_toggle" src="images/dark_mode_128dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png" onclick="theme_toggle()" alt="darkmode/lightmode toggle">
+        </div>
     </div>
 
     <div id="foran_dania_container">
@@ -103,12 +107,15 @@
 
 
 
+<script src="studieliv.js"></script>
+
+ <script src="toggles.js"></script>
+
+</body>
+
 <footer>
     <div id="footer_img_stack">
         <img id="footer_controller" src="images/Controller rød.png" alt="">
         <img id="footer_dania_logo" src="images/Dania-logo-hvid.svg" alt="Dania logo">
     </div>
 </footer>
-
-<script src="studieliv.js"></script>
-</body>

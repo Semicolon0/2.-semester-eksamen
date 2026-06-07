@@ -1,7 +1,7 @@
 #tidligere_baggrund,
 #tidligere_baggrund .c {
-    background-color: #ECECEC;
-    --c: #ffffff;
+    background-color: var(--tidl_bg);
+    --c: var(--tidl_trails);
 }
 
 #tidligere_baggrund {
@@ -23,11 +23,13 @@
 #tidligere_content_container h1{
     font-size:clamp(22px, 3vw, 80px);
     margin-bottom:1vh;
+    color: var(--text_color);
 }
 
 #tidligere_content_container h2{
     font-size:clamp(16px, 2vw, 28px);
     margin-bottom:0;
+    color: var(--text_color);
 }
 
 #tidligere_content_container p{
@@ -35,6 +37,7 @@
     overflow-wrap: break-word;
     font-size:clamp(13px, 1.5vw, 32px);
     margin-top: 2vh;
+    color: var(--text_color);
 }
 
 #studerende_projekter{

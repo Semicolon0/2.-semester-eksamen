@@ -79,6 +79,3 @@ function change_prj(dir){ //funktion der skifter projekt baseret på retning ("l
 function go_to_prj(){
     window.open(prj_link[current_prj_num]);
 }
-
-
-

@@ -9,13 +9,18 @@
     <link rel="icon" type="image/x-icon" href="images/Controller rød.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Sixtyfour&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Lexend+Deca:wght@100..900&family=Sixtyfour&display=swap" rel="stylesheet">
+
 </head>
 <body onload="change_prj('det er ligegyldigt hvad det her er')">
     <div id="header">
         <a href="index.html">
             <img id="dania_logo" src="images/Dania-logo-hvid.svg" alt="Dania logo">
         </a>
+        <div id="toggles">
+            <img id="dyslexia_toggle" src="images/dyslexia.png" onclick="dyslexia_toggle()" alt="dyslexia toggle button">
+            <img id="theme_toggle" src="images/dark_mode_128dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png" onclick="theme_toggle()" alt="darkmode/lightmode toggle">
+        </div>
     </div>
 
     <div id="foran_dania_container">
@@ -50,19 +55,21 @@
         <h1>UDDANNELSER</h1>
         <div id="uddannelser_img_div">
             <div class="uddannelser_uddannelse_div">
-                <img class="uddannelser_img" src="images/Datamatiker.png" loading="lazy" alt="Datamatiker uddannelse">
+                <img class="uddannelser_img" src="images/Datamatiker.png" loading="lazy" alt="Datamatiker uddannelse" onclick="udd_btn_load('selector_data')">
                 <h2>DATAMATIKER</h2>
                 <p>På datamatiker uddannelsen lærer man at programmere spil og andre digitale projekter med fokus på praktisk udvikling.</p>
                 <button class="btn udd_btn" onclick="udd_btn_load('selector_data')">LÆS MERE</button>
             </div>
+
             <div class="uddannelser_uddannelse_div">
-                <img class="uddannelser_img" src="images/multimediedesigner.png" loading="lazy" alt="Multimedie designer uddannelse">
+                <img class="uddannelser_img" src="images/multimediedesigner.png" loading="lazy" alt="Multimedie designer uddannelse" onclick="udd_btn_load('selector_mmd')"> 
                 <h2>Multimedie designer</h2>
                 <p>På multimediedesigner uddannelsen kommer man til at arbejder med design og visuel udvikling af spil, hjemmesider og digitale oplevelser.</p>
                 <button class="btn udd_btn" onclick="udd_btn_load('selector_mmd')">LÆS MERE</button>
             </div>
+            
             <div class="uddannelser_uddannelse_div">
-                <img class="uddannelser_img" src="images/softwareudvikler.png" loading="lazy" alt="Softwareudvikler uddannelse">
+                <img class="uddannelser_img" src="images/softwareudvikler.png" loading="lazy" alt="Softwareudvikler uddannelse" onclick="udd_btn_load('selector_soft')">
                 <h2>Softwareudvikler</h2>
                 <p>Softwareudvikler uddannelsen er en top-up-uddannelse for datamatikere, hvor man går i dybden med avanceret spil og softwareudvikling.</p>
                 <button class="btn udd_btn" onclick="udd_btn_load('selector_soft')">LÆS MERE</button>
@@ -219,6 +226,7 @@
 
 
     <script src="script.js"></script> <!--ligger hernede for at loader som det sidste på siden-->
+    <script src="toggles.js"></script>
 </body>
 
 <footer>
