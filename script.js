@@ -35,7 +35,7 @@ function nav_interact(btnStr){
 */
 
 function nav_interact(btnStr){
-    document.getElementById(`${btnStr.slice(4,btnStr.length)}_div`).scrollIntoView({behavior: "smooth"});
+    document.getElementById(`${btnStr.slice(4)}_div`).scrollIntoView({behavior: "smooth"});
 }
 
 function udd_btn_load(udd_navn){ //funktion der gemmer den valgte uddannelse og sender brugeren videre til uddannelsessiden
