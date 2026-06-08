@@ -4,7 +4,7 @@ document.querySelectorAll('.nav_btn').forEach(function(btn) { //henter alle knap
         nav_interact(btnStr); //kører nav_interact funtionen med btnStr som input
     })
 })
-
+/*
 function nav_interact(btnStr){
     switch (btnStr) {
         case "nav_om_os":
@@ -32,7 +32,11 @@ function nav_interact(btnStr){
             break;
     }
 }
+*/
 
+function nav_interact(btnStr){
+    document.getElementById(`${btnStr.slice(4,btnStr.length)}_div`).scrollIntoView({behavior: "smooth"});
+}
 
 function udd_btn_load(udd_navn){ //funktion der gemmer den valgte uddannelse og sender brugeren videre til uddannelsessiden
     localStorage.setItem("udd_navn", udd_navn); //gemmer uddannelsens navn i browserens localStorage så den huskes på næste side
