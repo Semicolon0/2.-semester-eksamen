@@ -110,7 +110,8 @@ body .c{
 }
 
 #udd_billede{
-    width:25vw;
+    width:clamp(256px,50vw,512px);
+    margin-bottom:8vw;
 }
 
 /* ============================================================
