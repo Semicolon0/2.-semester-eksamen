@@ -58,6 +58,10 @@ body{
 }
 /*-----------------header-----------------*/
 
+#om_os_div, #uddannelser_div, #studie_liv_div, #tidligere_studerende_div, #ansoeg_div {
+    scroll-margin-top: clamp(50px, 7vw, 90px);
+}
+
 #header{
     position: fixed;
     top:0;
