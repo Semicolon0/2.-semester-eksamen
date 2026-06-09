@@ -321,11 +321,11 @@ transform:skew(-12deg) scale(0.96);
     aspect-ratio: 4/3;
     object-fit: cover;
     cursor:pointer;
+    transition: 0.2s;
 }
 
 .uddannelser_img:hover{
     transform: scale(1.06); 
-    transition: 0.2s;
 }
 
 .uddannelser_uddannelse_div{
